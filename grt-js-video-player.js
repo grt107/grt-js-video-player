@@ -47,6 +47,8 @@ const grtVideoPlayer = {
 		
 			grtVideoPlayers.forEach(function (element) {
 
+				let touchClickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+
 				let grtVideoURL = element.getAttribute('grtvideoplayer-url');
 				let videoEmbed = '';
 				if (grtVideoPlayer.autoPlay && grtVideoPlayer.muted) {
@@ -121,7 +123,7 @@ const grtVideoPlayer = {
 		
 				// Click On the whole Video to Play
 				if (grtVideoPlayer.clickToPlay) {
-					thisVideoPlayer.addEventListener('click', grtVideoTogglePlay);
+					thisVideoPlayer.addEventListener(touchClickEvent, grtVideoTogglePlay);
 				}
 				
 				// If controls are enabled
@@ -135,7 +137,7 @@ const grtVideoPlayer = {
 					const grtVideoPlayerSpeedMenu = thisVideoPlayer.parentNode.querySelector(".grt-video-player-speed-menu");
 
 					// Click On Play Button
-					grtVideoPlayerPlayButton.addEventListener('click', grtVideoTogglePlay);					
+					grtVideoPlayerPlayButton.addEventListener(touchClickEvent, grtVideoTogglePlay);					
 			
 					// Update PlayerProgress
 					thisVideoPlayer.addEventListener('timeupdate', grtVideoPlayerUpdateProgress);
