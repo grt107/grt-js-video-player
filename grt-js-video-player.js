@@ -193,7 +193,7 @@ const grtVideoPlayer = {
 				
 						function grtOpenFullscreen() {
 							// thisVideoPlayer.hasAttribute('playsinline') ? thisVideoPlayer.removeAttribute('playsinline') : thisVideoPlayer.setAttribute('playsinline', '');
-							if (window.innerWidth < 768) {
+							if (window.matchMedia("(min-width: 767px)").matches) {
 								thisVideoPlayer.removeAttribute('playsinline');
 							} else {
 								thisVideoPlayer.addAttribute('playsinline');
