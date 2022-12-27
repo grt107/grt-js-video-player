@@ -52,15 +52,15 @@ const grtVideoPlayer = {
 				let grtVideoURL = element.getAttribute('grtvideoplayer-url');
 				let videoEmbed = '';
 				if (grtVideoPlayer.autoPlay && grtVideoPlayer.muted) {
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" autoplay muted><source src="${grtVideoURL}" type="video/mp4"></video>`;
+					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" playsinline autoplay muted><source src="${grtVideoURL}" type="video/mp4"></video>`;
 				} else if (grtVideoPlayer.autoPlay && !grtVideoPlayer.muted) {
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" autoplay><source src="${grtVideoURL}" type="video/mp4">
+					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" playsinline autoplay><source src="${grtVideoURL}" type="video/mp4">
 					</video>`;
 				} else if (!grtVideoPlayer.autoPlay && grtVideoPlayer.muted) {
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio}"><video class="grt-video-player" preload="auto" muted><source src="${grtVideoURL}" type="video/mp4">
+					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio}"><video class="grt-video-player" preload="auto" playsinline muted><source src="${grtVideoURL}" type="video/mp4">
 					</video>`;
 				} else if (!grtVideoPlayer.muted && !grtVideoPlayer.autoPlay){
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio}"><video class="grt-video-player" preload="auto"><source src="${grtVideoURL}" type="video/mp4">
+					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio}"><video class="grt-video-player" preload="auto" playsinline><source src="${grtVideoURL}" type="video/mp4">
 					</video>`;
 				}
 				if (grtVideoPlayer.controls) {
