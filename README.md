@@ -39,11 +39,9 @@ You can check the demo here: [grt107.github.io/grt-js-video-player/](http://grt1
 
 # Advanced Options
 
-**All options extended demo code:**
+**All options available demo code:**
 
-You can change video aspect ratio. It accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is set to 16x9.
-
-  ```html
+```html
 <script> 
 	grtVideoPlayer.init({ 
 	aspectRatio: "16x9", // Change video aspect ratio. Accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is 16x9. 
