@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>GRT JS Video Player - LightWeight Free Javascript Video Player</title>
+	<meta name="description" content="GRT Cookie Consent for GDPR Law - jQuery Plugin">
+	<meta name="author" content="grt107">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Demo CSS file not needed for the plugin -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css-demo-page.css">
+
+	<!-- GRT JS Video Player CSS -->
+	<link rel="stylesheet" href="grt-js-video-player.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+	<div class="demo-page-container">
+		<!-- Github Button -->
+		<div class="github-position">
+			<a class="github-button" href="https://github.com/grt107/grt-youtube-popup/archive/master.zip"
+				data-icon="octicon-cloud-download" data-size="large"
+				aria-label="Download grt107/grt-youtube-popup on GitHub">Download</a>
+			<a class="github-button" href="https://github.com/grt107" data-size="large"
+				aria-label="Follow @grt107 on GitHub">Follow @grt107</a>
+		</div>
+	
+		<h3>GRT JS Video Player - LightWeight Free Javascript Video Player</h3>
+		<p class="header-par">Simple and lightweight JavaScript HTML5 video player used for playing different video formats.<br/><br/>
+		This player supports all the basic modern features. You can change aspect ratio, autoplay, full screen, PIP (picture in picture), volume, controls visibility, and much more. Please read the integration below for all the available options.</p>
+
+
+		<h5>Demo</h5>
+
+		<div grtvideoplayer-url="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+
+		<h5>How to use the Video Player on your website</h5>
+	
+		<p>1- Include the player stylesheet file <strong>grt-js-video-player.css</strong> inside the
+			<strong>&lt;head&gt;</strong> tag.</p>
+		<code>&lt;link rel="stylesheet" href="grt-js-video-player.css"&gt;</code>
+	
+		<p>2- Include the javascript file <strong>grt-js-video-player.js</strong> before the closing <strong>&lt;body&gt;</strong> tag.</p>
+		<code>&lt;script src="grt-js-video-player.js"&gt;&lt;/script&gt;</code>
+
+		<p>3- Add the following div inside your document <strong>&lt;body&gt;</strong> and change the <strong>video url</strong> on the <strong>grtvideoplayer-url</strong> attribute.</p>
+<code>&lt;div grtvideoplayer-url=&quot;https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4&quot;&gt;&lt;/div&gt;
+</code>
+	
+		<h5>Advanced Options</h5>
+	
+		<p><strong>Aspect Ratio</strong> <br>You can change video aspect ratio. It accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is set to 16x9.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	aspectRatio: &quot;4x3&quot;, 
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>Controls</strong> <br>You can change controls visibility. It accepts values true or false. Default is set to true.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	controls: false,
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>Click To Play</strong> <br>You can click on the whole video container to play/pause video. It accepts values true or false. Default is set to true.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	clickToPlay: false,
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>AutoPlay</strong> <br>You can enable or disable autoplay. It accepts values true or false. Default is set to false. In some devices and browsers (especially mobile), the autoplay will work only if the video is also muted.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	autoPlay: true,
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>Muted</strong> <br>You can enable or disable sound on the video player. It accepts values true or false. Default is set to false.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	muted: true,
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>Volume</strong> <br>You can set the volume level on video. It accepts values from 0 to 100. Default is set to 80.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	volume: 75,
+});
+&lt;/script&gt;
+</code>
+
+
+<p><strong>FullScreen Button</strong> <br>You can enable or disable the FullScreen button on controls. It accepts values true or false. Default is set to true.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	fullScreenButton: false,
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>PIP Button</strong> <br>You can enable or disable the PIP button on controls. It accepts values true or false. Default is set to true.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	pipButton: false,
+});
+&lt;/script&gt;
+</code>
+
+<p><strong>Speed Button</strong> <br>You can enable or disable the Speed button on controls. It accepts values true or false. Default is set to true.</p>
+
+		<code>&lt;script&gt; 
+grtVideoPlayer.init({ 
+	speedButton: false,
+});
+&lt;/script&gt;
+</code>
+
+	</div>
+
+	
+	<!-- Github button for demo page -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+	<!-- GRT JS Video Player -->
+	<script src="grt-js-video-player.js"></script>
+
+	<script>
+		grtVideoPlayer.init({
+			aspectRatio: "16x9", // Change video aspect ratio. Accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is 16x9.
+			controls: true, // Enable or disable controls. Accepts values true or false. Default is true.
+			clickToPlay: true,// Click on the whole video container to play/pause video. Accepts values true or false. Default is true.
+			autoPlay: false, // Enable or disable autoplay. Accepts values true or false. Default is false.
+			muted: false, // Enable or disable sound on video. Accepts values true or false. Default is false.
+			volume:90, // Set the volume level on video. It accepts values from 0 to 100. Default is set to 80.
+			fullScreenButton: true, // Enable or disable the FullScreen button on controls. It accepts values true or false. Default is set to true.
+			pipButton: true, // Enable or disable the PIP button on controls. It accepts values true or false. Default is set to true.
+			speedButton: true, // Enable or disable the Speed button on controls. It accepts values true or false. Default is set to true.
+		});
+	</script>
+
+
+</body>
+
+</html>
