@@ -42,3 +42,100 @@ grtVideoPlayer.init({
 });
 </script>
   ```
+  
+  **Controls**
+
+You can change controls visibility. It accepts values true or false. Default is set to true.
+
+  ```html
+<script> 
+grtVideoPlayer.init({ 
+	controls: false,
+});
+</script>
+  ```
+
+ **Click To Play**
+
+You can click on the whole video container to play/pause video. It accepts values true or false. Default is set to true.
+
+  ```html
+<script> 
+grtVideoPlayer.init({ 
+	clickToPlay: false,
+});
+</script>
+  ```
+  
+**AutoPlay**
+
+You can enable or disable autoplay. It accepts values true or false. Default is set to false. In some devices and browsers (especially mobile), the autoplay will work only if the video is also muted.
+
+ ```html
+<script> 
+grtVideoPlayer.init({ 
+	autoPlay: true,
+});
+</script>
+  ```
+
+**Muted**
+
+You can enable or disable sound on the video player. It accepts values true or false. Default is set to false.
+
+ ```html
+<script> 
+grtVideoPlayer.init({ 
+	muted: true,
+});
+</script>
+  ```
+
+**Volume**
+
+You can set the volume level on video. It accepts values from 0 to 100. Default is set to 80.
+
+ ```html
+<script> 
+grtVideoPlayer.init({ 
+	volume: 75,
+});
+</script>
+  ```
+
+**FullScreen Button**
+
+You can enable or disable the FullScreen button on controls. It accepts values true or false. Default is set to true.
+
+
+ ```html
+<script> 
+grtVideoPlayer.init({ 
+	fullScreenButton: false,
+});
+</script>
+  ```
+  
+ **PIP Button**
+
+You can enable or disable the PIP button on controls. It accepts values true or false. Default is set to true.
+
+ ```html
+<script> 
+grtVideoPlayer.init({ 
+	pipButton: false,
+});
+</script>
+  ```
+  
+ **Speed Button**
+
+You can enable or disable the Speed button on controls. It accepts values true or false. Default is set to true.
+
+ ```html
+<script> 
+grtVideoPlayer.init({ 
+	speedButton: false,
+});
+</script>
+  ```
