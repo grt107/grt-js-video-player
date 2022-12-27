@@ -1,5 +1,5 @@
-# grt-js-video-player
-GRT JS Video Player - LightWeight Free Javascript Video Player
+# GRT JS Video Player
+LightWeight Free Javascript Video Player
 
 Simple and lightweight JavaScript HTML5 video player used for playing different video formats.<br/><br/>
 This player supports all the basic modern features. You can change aspect ratio, autoplay, full screen, PIP (picture in picture), volume, controls visibility, and much more. Please read the integration below for all the available options.
