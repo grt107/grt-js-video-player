@@ -192,6 +192,7 @@ const grtVideoPlayer = {
 						grtVideoPlayerFullScreenIcon.addEventListener('click', grtOpenFullscreen);
 				
 						function grtOpenFullscreen() {
+							thisVideoPlayer.hasAttribute('playsinline') ? thisVideoPlayer.removeAttribute('playsinline') : thisVideoPlayer.setAttribute('playsinline', '');
 							if (thisVideoPlayer.requestFullscreen) {
 								thisVideoPlayer.requestFullscreen();
 							} else if (thisVideoPlayer.webkitRequestFullscreen) { /* Safari */
