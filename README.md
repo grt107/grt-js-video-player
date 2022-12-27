@@ -44,15 +44,16 @@ You can check the demo here: [grt107.github.io/grt-js-video-player/](http://grt1
 ```html
 <script> 
 	grtVideoPlayer.init({ 
-	aspectRatio: "16x9", // Change video aspect ratio. Accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is 16x9. 
-	controls: true, // Enable or disable controls. Accepts values true or false. Default is true. 
-	clickToPlay: true,// Click on the whole video container to play/pause video. Accepts values true or false. Default is true. 
-	autoPlay: false, // Enable or disable autoplay. Accepts values true or false. Default is false. 
-	muted: false, // Enable or disable sound on video. Accepts values true or false. Default is false. 
-	volume:90, // Set the volume level on video. It accepts values from 0 to 100. Default is set to 80. 
-	fullScreenButton: true, // Enable or disable the FullScreen button on controls. It accepts values true or false. Default is set to true. 
-	pipButton: true, // Enable or disable the PIP button on controls. It accepts values true or false. Default is set to true. 
-	speedButton: true, // Enable or disable the Speed button on controls. It accepts values true or false. Default is set to true. });
+		aspectRatio: "16x9", // Change video aspect ratio. Accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is 16x9. 
+		controls: true, // Enable or disable controls. Accepts values true or false. Default is true. 
+		clickToPlay: true,// Click on the whole video container to play/pause video. Accepts values true or false. Default is true. 
+		autoPlay: false, // Enable or disable autoplay. Accepts values true or false. Default is false. 
+		muted: false, // Enable or disable sound on video. Accepts values true or false. Default is false. 
+		volume:90, // Set the volume level on video. It accepts values from 0 to 100. Default is set to 80. 
+		fullScreenButton: true, // Enable or disable the FullScreen button on controls. It accepts values true or false. Default is set to true. 
+		pipButton: true, // Enable or disable the PIP button on controls. It accepts values true or false. Default is set to true. 
+		speedButton: true, // Enable or disable the Speed button on controls. It accepts values true or false. Default is set to true. 
+	});
 </script>
   ```
 
