@@ -48,13 +48,13 @@
 	padding-top:150%
 }
 
-
 .grt-video-player {
 	position: absolute;
 	inset:0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	background: #000;
 }
   
 .grt-video-player-controls-overlay {
@@ -266,9 +266,6 @@
 	align-items: center;
 }
 
-/* .grt-video-player-speed {
-	user-select: none;
-} */
 
 .grt-video-player-speed small {
 	font-size:12px;
