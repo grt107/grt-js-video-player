@@ -193,7 +193,11 @@ const grtVideoPlayer = {
 				
 						function grtOpenFullscreen() {
 							// thisVideoPlayer.hasAttribute('playsinline') ? thisVideoPlayer.removeAttribute('playsinline') : thisVideoPlayer.setAttribute('playsinline', '');
-							thisVideoPlayer.removeAttribute('playsinline') 
+							if (window.innerWidth < 768) {
+								thisVideoPlayer.removeAttribute('playsinline');
+							} else {
+								thisVideoPlayer.addAttribute('playsinline');
+							}
 							if (thisVideoPlayer.requestFullscreen) {
 								thisVideoPlayer.requestFullscreen();
 							} else if (thisVideoPlayer.webkitRequestFullscreen) { /* Safari */
