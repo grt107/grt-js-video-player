@@ -30,7 +30,7 @@ You can check the demo here: [grt107.github.io/grt-cookie-consent/](http://grt10
 
 
 # Advanced Options
-	**Aspect Ratio**
+Aspect Ratio
 You can change video aspect ratio. It accepts values: 16x9, 1x1 , 4x3, 5x4, 3x2, 21x9, 9x16, 3x4, 4x5, 2x3. Default is set to 16x9.
 
   ```html
