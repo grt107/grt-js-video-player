@@ -193,17 +193,19 @@ const grtVideoPlayer = {
 				
 						function grtOpenFullscreen() {
 							// thisVideoPlayer.hasAttribute('playsinline') ? thisVideoPlayer.removeAttribute('playsinline') : thisVideoPlayer.setAttribute('playsinline', '');
-							if (window.matchMedia("(max-width: 767px)").matches) {
-								thisVideoPlayer.removeAttribute('playsinline');
-							} else {
-								thisVideoPlayer.addAttribute('playsinline');
-							}
+							// if (window.matchMedia("(max-width: 767px)").matches) {
+							// 	thisVideoPlayer.removeAttribute('playsinline');
+							// } else {
+							// 	thisVideoPlayer.addAttribute('playsinline');
+							// }
 							if (thisVideoPlayer.requestFullscreen) {
 								thisVideoPlayer.requestFullscreen();
 							} else if (thisVideoPlayer.webkitRequestFullscreen) { /* Safari */
 								thisVideoPlayer.webkitRequestFullscreen();
 							} else if (thisVideoPlayer.msRequestFullscreen) { /* IE11 */
 								thisVideoPlayer.msRequestFullscreen();
+							} else if (thisVideoPlayer.webkitEnterFullscreen) {
+								thisVideoPlayer.webkitEnterFullscreen();
 							}
 						}
 					}
