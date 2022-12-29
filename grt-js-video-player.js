@@ -11,7 +11,7 @@ const grtVideoPlayer = {
 	speedButton: true,
 	init: function(...args) {
 
-		// Check for declared settings by user
+		// Check for settings by the user
 		if (args[0].hasOwnProperty('aspectRatio')) {
 			this.aspectRatio = args[0].aspectRatio;
 		}
@@ -49,20 +49,10 @@ const grtVideoPlayer = {
 
 				let touchClickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
+				let mutedStatus = grtVideoPlayer.muted ? 'muted' : '';
+				let autoPlayStatus = grtVideoPlayer.autoPlay ? 'autoplay' : '';
 				let grtVideoURL = element.getAttribute('grtvideoplayer-url');
-				let videoEmbed = '';
-				if (grtVideoPlayer.autoPlay && grtVideoPlayer.muted) {
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" playsinline autoplay muted><source src="${grtVideoURL}" type="video/mp4"></video>`;
-				} else if (grtVideoPlayer.autoPlay && !grtVideoPlayer.muted) {
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" playsinline autoplay><source src="${grtVideoURL}" type="video/mp4">
-					</video>`;
-				} else if (!grtVideoPlayer.autoPlay && grtVideoPlayer.muted) {
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio}"><video class="grt-video-player" preload="auto" playsinline muted><source src="${grtVideoURL}" type="video/mp4">
-					</video>`;
-				} else if (!grtVideoPlayer.muted && !grtVideoPlayer.autoPlay){
-					videoEmbed += `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio}"><video class="grt-video-player" preload="auto" playsinline><source src="${grtVideoURL}" type="video/mp4">
-					</video>`;
-				}
+				let videoEmbed = `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" playsinline ${autoPlayStatus} ${mutedStatus}><source src="${grtVideoURL}" type="video/mp4"></video>`;
 				if (grtVideoPlayer.controls) {
 					videoEmbed +=`<div class="grt-video-player-controls-overlay">
 									<div class="grt-video-player-progress-seekbar">
