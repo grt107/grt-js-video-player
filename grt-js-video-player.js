@@ -53,17 +53,17 @@ const grtVideoPlayer = {
 				let autoPlayStatus = grtVideoPlayer.autoPlay ? 'autoplay' : '';
 				let grtVideoURL = element.getAttribute('grtvideoplayer-url');
 				let videoEmbed = `<div class="grt-video-player-container grt-video-player-${grtVideoPlayer.aspectRatio} grt-video-player-active"><video class="grt-video-player" preload="auto" playsinline ${autoPlayStatus} ${mutedStatus}><source src="${grtVideoURL}" type="video/mp4"></video>`;
-				if (grtVideoPlayer.controls) {
-					videoEmbed +=`<div class="grt-video-player-controls-overlay">
-									<div class="grt-video-player-progress-seekbar">
-										<span></span>
-									</div>
-									<div class="grt-video-player-controls">
-										<div class="grt-video-player-play-button">
+					if (grtVideoPlayer.controls) {
+						videoEmbed +=`<div class="grt-video-player-controls-overlay">
+										<div class="grt-video-player-progress-seekbar">
 											<span></span>
-										</div><div class="grt-video-player-volume-row">
-										<input type="range" class="grt-video-player-volume" min="0" max="1" step="0.05" value="${grtVideoPlayer.volume / 100}" style="background-size: ${grtVideoPlayer.volume}% 100%;">
-									</div><div class="grt-video-player-right-col">`;
+										</div>
+										<div class="grt-video-player-controls">
+											<div class="grt-video-player-play-button">
+												<span></span>
+											</div><div class="grt-video-player-volume-row">
+											<input type="range" class="grt-video-player-volume" min="0" max="1" step="0.05" value="${grtVideoPlayer.volume / 100}" style="background-size: ${grtVideoPlayer.volume}% 100%;">
+										</div><div class="grt-video-player-right-col">`;
 					if (grtVideoPlayer.speedButton) {
 						videoEmbed +=`<div class="grt-video-player-speed">
 											<small>Speed</small>
