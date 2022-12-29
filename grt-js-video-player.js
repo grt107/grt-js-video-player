@@ -61,17 +61,9 @@ const grtVideoPlayer = {
 									<div class="grt-video-player-controls">
 										<div class="grt-video-player-play-button">
 											<span></span>
-										</div>`;
-					if (grtVideoPlayer.volume !== 80) {
-						videoEmbed +=`<div class="grt-video-player-volume-row">
+										</div><div class="grt-video-player-volume-row">
 										<input type="range" class="grt-video-player-volume" min="0" max="1" step="0.05" value="${grtVideoPlayer.volume / 100}" style="background-size: ${grtVideoPlayer.volume}% 100%;">
-									</div>`
-					} else {
-						videoEmbed +=`<div class="grt-video-player-volume-row">
-										<input type="range" class="grt-video-player-volume" min="0" max="1" step="0.05" value="0.8" style="background-size: 80% 100%;">
-									</div>`
-					}
-					videoEmbed +=`<div class="grt-video-player-right-col">`;
+									</div><div class="grt-video-player-right-col">`;
 					if (grtVideoPlayer.speedButton) {
 						videoEmbed +=`<div class="grt-video-player-speed">
 											<small>Speed</small>
@@ -86,11 +78,9 @@ const grtVideoPlayer = {
 					if (grtVideoPlayer.pipButton) {
 						videoEmbed +=` <div class="grt-video-player-pip"><span class="grt-video-player-pip-icon"></span></div>`;
 					}
-
 					if (grtVideoPlayer.fullScreenButton) {
 						videoEmbed +=`<div class="grt-video-player-full-screen"><span class="grt-video-player-full-screen-icon"></span></div>`;
 					}
-
 					videoEmbed +=`</div></div></div>`;
 				}
 				videoEmbed +=`</div>`;
