@@ -48,7 +48,6 @@ const grtVideoPlayer = {
 			grtVideoPlayers.forEach(function (element) {
 
 				let touchClickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-
 				let mutedStatus = grtVideoPlayer.muted ? 'muted' : '';
 				let autoPlayStatus = grtVideoPlayer.autoPlay ? 'autoplay' : '';
 				let grtVideoURL = element.getAttribute('grtvideoplayer-url');
@@ -172,17 +171,13 @@ const grtVideoPlayer = {
 						grtVideoPlayerFullScreenIcon.addEventListener('click', grtOpenFullscreen);
 				
 						function grtOpenFullscreen() {
-							// thisVideoPlayer.hasAttribute('playsinline') ? thisVideoPlayer.removeAttribute('playsinline') : thisVideoPlayer.setAttribute('playsinline', '');
-							// if (window.matchMedia("(max-width: 767px)").matches) {
-							// 	thisVideoPlayer.removeAttribute('playsinline');
-							// } else {
-							// 	thisVideoPlayer.addAttribute('playsinline');
-							// }
 							if (thisVideoPlayer.requestFullscreen) {
 								thisVideoPlayer.requestFullscreen();
-							} else if (thisVideoPlayer.webkitRequestFullscreen) { /* Safari */
+							} else if (thisVideoPlayer.webkitRequestFullscreen) {
 								thisVideoPlayer.webkitRequestFullscreen();
-							} else if (thisVideoPlayer.msRequestFullscreen) { /* IE11 */
+							} else if (thisVideoPlayer.mozRequestFullScreen) {
+								thisVideoPlayer.mozRequestFullScreen();
+							} else if (thisVideoPlayer.msRequestFullscreen) { 
 								thisVideoPlayer.msRequestFullscreen();
 							} else if (thisVideoPlayer.webkitEnterFullscreen) {
 								thisVideoPlayer.webkitEnterFullscreen();
@@ -222,11 +217,6 @@ const grtVideoPlayer = {
 						}
 					}
 
-					
-			
-					
-			
-					
 				}
 
 		
