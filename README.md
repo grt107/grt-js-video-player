@@ -19,7 +19,7 @@ You can check the demo here: [grt107.github.io/grt-js-video-player/](http://grt1
 2- Include the javascript file ```grt-js-video-player.js``` before the closing ```<body>``` tag.
 
   ```html
-  <script src="grt-cookie-consent.js"></script>
+  <script src="grt-js-video-player.js"></script>
   ```
 
 3- Add the following div inside your document  ```body``` and change the ```video url``` on the ```grtvideoplayer-url``` attribute.
